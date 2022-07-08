@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<meta name="description" content="Get real time weather of any place you want">
+				<title>Weather Report</title>
+				<!-- CSS -->
+				<style>
+								#search{
+								border-radius:50px;
+								}
+				</style>
+				
+				
+				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+</head>
+<body>
+				<br>
+				<center><h1 class="container">Weather Viewer</h1></center>
+				<br>
+			<input id="search"	placeholder="Enter Your City" class="form-control">
+			<br>
+			<center>
+			
+		
+			<button onclick="search();"  class="btn btn-primary">Search Weather </button>
+			
+			</center>
+			<a id="output"></a>
+			
+			
+			
+			
+			
+			
+			<!-- Javascript -->
+			<script>
+							function search(){
+							
+							let x = document.getElementById('search').value;
+							<!-- Input Validator -->
+							if (x == "") {
+    alert("City must be filled out");
+    return false;
+  }
+
+
+							let y = "https://www.google.com/search?q=weather:" + x ;
+							document.getElementById('output').href=y;
+							document.getElementById('output').click();
+							}
+							
+						
+			</script>
+			
+</body>
+</html>
